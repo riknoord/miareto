@@ -1,0 +1,208 @@
+body{
+    background:#e3e3e3;
+}
+.container-fluid {
+    padding: 0px;
+    position:relative;
+}
+header{
+    width:100%;
+    height: 65px;
+    background-color: #373737;
+    border-bottom: 2px solid #717171;
+}
+header .search{
+    margin-top: 14px;
+}
+footer{
+    height:300px;
+    background-color:#334c5c;
+}
+
+.title{
+    font-size:20px;
+    color: #949494;
+}
+
+.main-message-field{
+    background:#15658f;
+    min-height:600px;
+}
+.main-profile-field{
+    background:#e3e3e3;
+    min-height:600px;
+}
+.w-box{
+    padding:10px;
+    background:#fff;
+    border-bottom:2px solid #cecece;
+    margin-top:10px;
+}
+.front-profile{
+    width:300px;
+    position:absolute;
+    top:0px;
+    left: 50%;
+    margin-left:-150px;
+    z-index:10;
+}
+.front-profile .f-p-img-box img{
+    width:100%;
+}
+.f-p-info-box h2{
+    font-size: 20px;
+    margin: 0px;
+    color: #949494;
+}
+.f-p-info-box span{
+    color: #99bbd2;
+}
+.sub-right{
+    float: right;
+    color: #f2be8c !important;
+}
+
+.messages{
+    padding: 0px;
+    margin: 0px 0px 50px 0px;
+    list-style: none;
+}
+.messages .msg{
+    position:relative;
+    margin-top:20px;
+}
+.messages .msg .msg-from{
+}
+.messages .msg .msg-from .title{
+    font-size: 14px;
+    margin: 0px;
+    color: #949494;
+}
+.messages .msg .msg-from-info{
+    padding-left: 50px;
+    margin-top:-5px;
+    margin-bottom:10px;
+}
+.messages .msg .msg-from .info{
+    color: #f2be8c !important;
+    font-size: 12px
+}
+.messages .msg .msg-from img{
+    width: 42px;
+    position: absolute;
+    top: -4px;
+}
+.messages .msg .msg-content{
+    font-size: 12px;
+    color: #9E9E9E;
+}
+.messages .msg .msg-comments{
+
+}
+
+
+/* Arrows */
+.arrow{
+    position:absolute;
+}
+.arrow.right{
+    position: absolute;
+    top: 220px;
+    right: -64px;
+}
+.arrow.right svg{
+    position: absolute;
+    width: 500px;
+}
+.arrow.left{
+    position: absolute;
+    top: 220px;
+    left: -64px;
+}
+.arrow.left svg{
+    position: absolute;
+    width: 500px;
+    right: 46px;
+}
+.arrow.bottom{
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    margin-left: -23px;
+}
+.arrow.bottom svg{
+    position: absolute;
+    height: 500px;
+    top: 46px;
+}
+
+
+
+/* Friends */
+.compact-friends ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.compact-friends ul li{
+    display: block;
+    width: 23.6%;
+    float: left;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    position:relative;
+}
+.compact-friends ul li img{
+    width:100%;
+}
+.compact-friends ul li .link-icon {
+    width:24px;
+    position:absolute;
+    right:2px;
+    bottom:2px;
+}
+.compact-friends .info{
+    padding-top:10px;
+    font-size:12px;
+    color:#c9c9c9;
+}
+.compact-friends .info a{
+    text-decoration: underline;
+    color: #15658f;
+    padding-left: 30px;
+    background: url('../images/linking-arrow.png') 0px 0px no-repeat;
+    line-height: 24px;
+    display: inline-block;
+}
+.compact-friends .info .last-added{
+    display: inline;
+    float: left;
+}
+.compact-friends .info .more{
+    display: inline;
+    float: right;
+    text-align: right;
+}
+
+/* Profile-link */
+.profile-link{
+    margin-top: 174px;
+    margin-bottom: 30px;
+    width: 280px;
+}
+.profile-link.right{
+    float: right;
+}
+.profile-link.left{
+    float: left;
+}
+.profile-link img{
+    float: left;
+    margin-right: 10px;
+    height: 48px;
+}
+.profile-link .info .title{
+    font-size:14px;
+}
