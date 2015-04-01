@@ -1,6 +1,24 @@
+/*
+font-family: 'Poiret One', cursive;
+font-family: 'PT Sans Narrow', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+*/
+
+
+
+
+
 body{
     background:#e3e3e3;
+    font-family: 'Open Sans Condensed', sans-serif;
 }
+
+.form-group-line{
+    display:inline-block;
+}
+
+
+
 .container-fluid {
     padding: 0px;
     position:relative;
@@ -18,6 +36,29 @@ footer{
     height:300px;
     background-color:#334c5c;
 }
+
+/* Front Login page */
+.front-login {
+    background-color: #D6EFFF;
+    padding: 100px 0px 200px 0px;
+}
+.front-login .login-container{
+    float:right;
+    width:60%;
+    padding:50px;
+}
+.front-login .register-container{
+    width:60%;
+    padding:50px;
+}
+
+.register-container .register-firstname-field{
+    width: 50%;
+}
+.register-container .register-lastname-field{
+    width: 49%;
+}
+
 
 .title{
     font-size:20px;
