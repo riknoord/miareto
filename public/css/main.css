@@ -39,7 +39,10 @@ footer{
 
 /* Front Login page */
 .front-login {
-    background-color: #D6EFFF;
+    padding: 100px 0px 200px 0px;
+    background-image: url('../images/background_login_screen.jpg');
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
     padding: 100px 0px 200px 0px;
 }
 .front-login .login-container{
