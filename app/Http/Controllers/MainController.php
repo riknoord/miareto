@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class MainController extends Controller {
 
@@ -13,10 +14,13 @@ class MainController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-	{
-		return view("login");
-	}
-
+    {
+        if (Auth::Check()){
+            return view("profile.profile");
+        }else{
+            return view("login");
+        }
+    }
 	/**
 	 * Show the form for creating a new resource.
 	 *

@@ -8,15 +8,26 @@
 
             <div class="col-md-6">
                 <div class="login-container">
-                    <form method="post">
+                    @if (count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <strong>Incorrect login data</strong><br>
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    <form method="POST" action="/auth/login">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <h2>My account</h2>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                            <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter email">
                         </div>
                         <div class="form-group">
                            <label for="exampleInputPassword1">Password</label>
-                           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                           <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-default">Login</button>
                     </form>
