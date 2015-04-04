@@ -6,14 +6,16 @@ class UserProfile extends Model {
 
 	protected $table = "userprofiles";
 
+    protected $fillable = ['firstname', 'lastname', 'gender'];
+
     public function user(){
-        $this->belongsTo('app/User');
+        return $this->belongsTo('App\User');
     }
     public function messages(){
-        $this->hasMany('app/Message');
+        return $this->hasMany('App\Message');
     }
     public function images(){
-        $this->hasMany('app/Image');
+        return $this->hasMany('App\Image');
     }
 
 }

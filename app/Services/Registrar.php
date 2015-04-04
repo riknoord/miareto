@@ -1,9 +1,14 @@
 <?php namespace App\Services;
 
 use App\User;
+use App\UserProfile;
 use Validator;
 use Illuminate\Contracts\Auth\Registrar as RegistrarContract;
 
+/**
+ * Class Registrar
+ * @package App\Services
+ */
 class Registrar implements RegistrarContract {
 
 	/**
@@ -22,16 +27,25 @@ class Registrar implements RegistrarContract {
 
 	/**
 	 * Create a new user instance after a valid registration.
-	 *
+	 * Attach a new profile to created user.
+     *
 	 * @param  array  $data
 	 * @return User
 	 */
 	public function create(array $data)
 	{
-		return User::create([
+		$user = User::create([
 			'email' => $data['email'],
 			'password' => bcrypt($data['password']),
 		]);
+
+        $user->profile()->create([
+            'firstname' => $data['firstname'],
+            'lastname' => $data['lastname'],
+            'gender' => $data['gender'],
+        ]);
+
+        return $user;
 	}
 
 }
