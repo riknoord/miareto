@@ -1,3 +1,4 @@
+@if($ShowNavProfile)
 <ul class="NavProfileContainer">
     <li><img src="/images/profile_21423567.jpg" /></li>
     <li>
@@ -7,3 +8,4 @@
         </div>
     </li>
 </ul>
+@endif

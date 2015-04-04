@@ -8,9 +8,15 @@ class NavProfileComposer {
 
     public function compose(View $view){
 
-        $profile = Auth::user()->profile;
-        $view->with('profile',$profile);
+        $authcheck = (Auth::check() ? true : false);
+        $profile = ($authcheck ? Auth::user()->profile : null);
 
+        $data = [
+            'profile' => $profile,
+            'ShowNavProfile' => $authcheck
+        ];
+
+        $view->with($data);
     }
 
 } 
