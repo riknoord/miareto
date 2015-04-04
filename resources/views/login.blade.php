@@ -36,25 +36,30 @@
 
             <div class="col-md-6">
                 <div class="register-container">
-                    <form method="post">
+                    <form method="post" action="auth/register">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <h2>Create account</h2>
                          <div class="form-group">
                            <div class="form-group-line register-firstname-field">
                                <label for="FirstNameInput">Firstname</label>
-                               <input type="text" class="form-control" id="FirstNameInput" placeholder="firstname">
+                               <input type="text" name="firstname" class="form-control" id="FirstNameInput" placeholder="firstname">
                            </div>
                            <div class="form-group-line register-lastname-field">
                                <label for="LastNameInput">Lastname</label>
-                               <input type="text" class="form-control" id="LastNameInput" placeholder="lastname">
+                               <input type="text" name="lastname" class="form-control" id="LastNameInput" placeholder="lastname">
                            </div>
                          </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="email">
+                            <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="email">
                         </div>
                         <div class="form-group">
                            <label for="exampleInputPassword1">Password</label>
-                           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                           <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                           <label for="exampleInputPassword1">Password Again</label>
+                           <input type="password" name="password_confirmation" class="form-control" id="exampleInputPassword1" placeholder="Password Again">
                         </div>
                         <div class="form-group">
                           <label class="checkbox-inline">
