@@ -14,7 +14,9 @@
 	<header>
 
         <div class="container">
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                @include('partials.navprofile')
+            </div>
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <div class="form-group">
@@ -24,7 +26,6 @@
         </div>
 
 	</header>
-	<?php 4<<5; ?>
     @yield('content')
 
     <footer class="container-fluid">
