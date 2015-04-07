@@ -12,8 +12,9 @@
 */
 
 Route::get('/', 'MainController@index');
-
 Route::get('home', 'HomeController@index');
+
+Route::post('messages/add', 'MessageController@store');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',

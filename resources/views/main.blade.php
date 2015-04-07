@@ -9,6 +9,9 @@
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/main.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Poiret+One|PT+Sans+Narrow:400,700|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/main.js"></script>
 </head>
 <body>
 	<header>

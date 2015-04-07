@@ -1,13 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
 use App\Message;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
-class MainController extends Controller {
+class MessageController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -15,14 +12,10 @@ class MainController extends Controller {
 	 * @return Response
 	 */
 	public function index()
-    {
-        if (Auth::Check()){
-            $messages = Message::IdDescending()->get();
-            return view("overview")->with('messages',$messages);
-        }else{
-            return view("login");
-        }
-    }
+	{
+
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *
@@ -30,17 +23,19 @@ class MainController extends Controller {
 	 */
 	public function create()
 	{
-		//
-	}
+
+    }
 
 	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+        $message = new Message(['message' => $request->input('message')]);
+        $message = Auth::user()->profile->messages()->save($message);
+        return view("messages.single")->with('message',$message);
 	}
 
 	/**

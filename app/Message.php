@@ -6,4 +6,14 @@ class Message extends Model {
 
     protected $table = "messages";
 
+    protected $fillable = ['message'];
+
+    public function profile(){
+        return $this->belongsTo('App\UserProfile','userprofile_id','id');
+    }
+
+    public function scopeIdDescending($query)
+    {
+        return $query->orderBy('id','DESC');
+    }
 }

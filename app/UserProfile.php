@@ -29,7 +29,7 @@ class UserProfile extends Model {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function messages(){
-        return $this->hasMany('App\Message');
+        return $this->hasMany('App\Message','userprofile_id');
     }
 
     /**
