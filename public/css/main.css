@@ -230,9 +230,10 @@ footer{
     box-shadow: 0px 3px 4px 0px rgb(200, 200, 200);
 }
 .messages .msg .msg-content{
-    font-size: 14px;
+    font-size: 12px;
     color: #9E9E9E;
     padding-top: 4px;
+    font-family: arial;
 }
 .messages .msg .msg-comments{
 
