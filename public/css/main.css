@@ -139,6 +139,16 @@ footer{
     margin: 0px 0px 50px 0px;
     list-style: none;
 }
+.messages.addfield{
+    margin: 0px 0px 0px 0px;
+}
+.messages button[type="submit"]{
+    border-radius: 0px;
+    float: right;
+    margin-top: 4px;
+    background-color: #15658F;
+    color: white;
+}
 .messages .new-message .message-input{
     border-radius: 0px;
     background-color:#F5F5F5;

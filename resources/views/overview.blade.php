@@ -7,16 +7,16 @@
     </div>
 
     <div class="col-md-6 main-profile-field">
-         <ul class="messages">
+         <ul class="messages addfield">
             <li class="new-message">
-                <div class="w-box">
+                <div class="w-box clearfix">
                      <form class="dynaform" method="POST" action="/messages/add" data-postto="postfield">
                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <h2>Place a new message</h2>
                         <div class="newmessage">
                             <textarea class="form-control message-input" name="message" placeholder="Enter your message"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-default">Login</button>
+                        <button type="submit" class="btn">Add message</button>
                      </form>
                 </div>
             </li>
