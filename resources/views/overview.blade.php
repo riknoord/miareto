@@ -33,7 +33,7 @@
                         </div>
                     </div>
                     <div class="msg-content">
-                        {{$message->message}}
+                        {!! nl2br(e($message->message)) !!}
                     </div>
                     <div class="msg-comments">
 
