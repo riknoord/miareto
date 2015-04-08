@@ -40,6 +40,6 @@ class UserProfile extends Model {
     }
 
     public function profileimage(){
-        return $this->hasOne('App\Image','userprofile_id');
+        return $this->hasOne('App\Image','userprofile_id')->where('is_profile_image','=','1');
     }
 }
