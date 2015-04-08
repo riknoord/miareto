@@ -29,7 +29,7 @@
                         <img src="../images/profile_21423567.jpg" >
                         <div class="msg-from-info">
                             <div class="title">{{$message->profile->firstname}} {{$message->profile->lastname}}</div>
-                            <div class="info">{{$message->created_at}}</div>
+                            <div class="info">{{$message->created_at->diffForHumans()}}</div>
                         </div>
                     </div>
                     <div class="msg-content">
