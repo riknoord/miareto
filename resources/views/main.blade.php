@@ -29,6 +29,20 @@
         </div>
 
 	</header>
+
+	<div class="profilemenu">
+	    <div class="container">
+	        <div class="col-lg-12">
+                <ul class="items">
+                    <li class="item"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;My profile</a></li>
+                    <li class="item"><a href="#"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;&nbsp;My images</a></li>
+                    <li class="item"><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;&nbsp;My messages</a></li>
+                    <li class="item"><a href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;&nbsp;My friends</a></li>
+                </ul>
+	        </div>
+	    </div>
+	</div>
+
     @yield('content')
 
     <footer class="container-fluid">

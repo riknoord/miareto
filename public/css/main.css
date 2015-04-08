@@ -12,6 +12,8 @@ body{
     background:#E3E3E3;
     font-family: 'Open Sans Condensed', sans-serif;
 }
+a:hover{text-decoration: none;}
+
 
 .form-group-line{
     display:inline-block;
@@ -74,6 +76,33 @@ footer{
 .NavProfileContainer li:last-child{
     border-right: 1px solid rgb(73, 73, 73);
     padding-right:20px;
+}
+/* Profile navigation menu */
+.profilemenu {
+    background-color: rgb(113, 113, 113);
+    border-bottom: 2px solid rgb(113, 113, 113);
+}
+.profilemenu .items{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+}
+.profilemenu .item{
+    float: left;
+    width: 25%;
+    border-right: 1px solid grey;
+}
+.profilemenu .item:last-child{
+    border-right:0px;
+}
+.profilemenu a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+}
+.profilemenu a:hover{
+    background-color: rgb(90, 90, 90);
 }
 
 
