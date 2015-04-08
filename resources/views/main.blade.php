@@ -11,6 +11,7 @@
     <link href='http://fonts.googleapis.com/css?family=Poiret+One|PT+Sans+Narrow:400,700|Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 
     <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
     <script src="../js/main.js"></script>
 </head>
 <body>
@@ -35,7 +36,7 @@
 	        <div class="col-lg-12">
                 <ul class="items">
                     <li class="item"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;My profile</a></li>
-                    <li class="item"><a href="#"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;&nbsp;My images</a></li>
+                    <li class="item"><a class="pop-menu" href="/images/edit"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;&nbsp;My images</a></li>
                     <li class="item"><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;&nbsp;My messages</a></li>
                     <li class="item"><a href="#"><span class="glyphicon glyphicon-th" aria-hidden="true"></span>&nbsp;&nbsp;My friends</a></li>
                 </ul>
@@ -50,5 +51,10 @@
 
     </footer>
 
+    <div id="pop-menu" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="w-box content"></div>
+      </div>
+    </div>
 </body>
 </html>

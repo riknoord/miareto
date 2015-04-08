@@ -14,6 +14,9 @@
 Route::get('/', 'MainController@index');
 Route::get('home', 'HomeController@index');
 
+Route::get('images/edit','ImagesController@edit');
+Route::post('images/add/profile','ImagesController@addProfileImage');
+
 Route::post('messages/add', 'MessageController@store');
 
 Route::controllers([

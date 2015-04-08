@@ -345,3 +345,33 @@ footer{
 .profile-link .info .title{
     font-size:14px;
 }
+
+
+
+/* Image editor */
+.edit-profile-images form{
+    display:none;
+}
+.edit-profile-images{
+
+}
+.edit-profile-images .profile-image{
+    border-right:1px solid #F2F2F2;
+}
+.edit-profile-images .profile-image img{
+    border: 2px solid white;
+    box-shadow: 0px 3px 4px 0px rgb(200, 200, 200);
+}
+.edit-profile-images .albums-images{
+
+}
+.edit-profile-images .btn{
+    display: block;
+    font-size: 20px;
+    border-bottom: 1px solid #cecece;
+    border-radius: 0px;
+    text-align: left;
+    color: #373737;
+    margin-top: 6px;
+    width: 254px;
+}

@@ -17,7 +17,7 @@ class MainController extends Controller {
 	public function index()
     {
         if (Auth::Check()){
-            $messages = Message::IdDescending()->get();
+            $messages = Message::IdDescending()->with('profile','profile.profileimage')->take(30)->get();
             return view("overview")->with('messages',$messages);
         }else{
             return view("login");

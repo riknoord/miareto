@@ -30,6 +30,12 @@ $(function() {
             }
         });
     });
+
+    $(".pop-menu").click(function(e){
+        e.preventDefault();
+        $('#pop-menu').find(".content").load($(this).attr("href"));
+        $('#pop-menu').modal();
+    });
 });
 
 function resize_left_bar(){

@@ -36,7 +36,10 @@ class UserProfile extends Model {
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function images(){
-        return $this->hasMany('App\Image');
+        return $this->hasMany('App\Image','userprofile_id');
     }
 
+    public function profileimage(){
+        return $this->hasOne('App\Image','userprofile_id');
+    }
 }
