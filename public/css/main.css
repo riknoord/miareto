@@ -37,6 +37,19 @@ footer{
     background-color:#334c5c;
 }
 
+.loader{
+    display: none;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: 10;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+
 /* Navigation Profile */
 .NavProfileContainer{
     list-style: none;
@@ -109,6 +122,7 @@ footer{
     background:#fff;
     border-bottom:2px solid #cecece;
     margin-top:10px;
+    position: relative;
 }
 .front-profile{
     width:300px;

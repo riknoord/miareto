@@ -10,11 +10,12 @@
          <ul class="messages addfield">
             <li class="new-message">
                 <div class="w-box clearfix">
-                     <form class="dynaform" method="POST" action="/messages/add" data-postto="postfield">
+                <div class="loader"><img src="/images/squares.gif" /></div>
+                     <form class="dynaform" method="POST" action="/messages/add" data-postto="postfield" data-loader="loader">
                      <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <h2>Place a new message</h2>
                         <div class="newmessage">
-                            <textarea class="form-control message-input" name="message" placeholder="Enter your message"></textarea>
+                            <textarea class="form-control message-input" name="message" placeholder="Enter your message" required="required"></textarea>
                         </div>
                         <button type="submit" class="btn">Add message</button>
                      </form>

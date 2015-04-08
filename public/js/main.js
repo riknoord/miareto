@@ -11,7 +11,9 @@ $(function() {
         var datastring = $form.serialize();
 
         var posttofield = $form.data('postto') ? $form.data('postto') : null;
+        var loader      = $form.data('loader') ? $form.data('loader') : null;
 
+        if(loader) loading(loader,true);
 
         $.ajax({
             type: "POST",
@@ -22,6 +24,8 @@ $(function() {
                     $(data).hide().prependTo("." + posttofield).fadeIn('slow');
                     $form.trigger("reset");
                     resize_left_bar();
+
+                    if(loader) loading(loader,false);
                 }
             }
         });
@@ -32,4 +36,14 @@ function resize_left_bar(){
     if($(".main-profile-field") && $(".main-message-field")){
         $(".main-message-field").height($(".main-profile-field").height() + "px");
     }
+}
+function loading(loadcontainer, show){
+
+    if(show) {
+        var margintop = ($("." + loadcontainer).height() / 2) - 20;
+
+        $("." + loadcontainer + ">img").css("margin-top",  margintop + "px");
+        $("." + loadcontainer).show();
+    }
+    if(!show) $("." + loadcontainer).fadeOut('fast');
 }
