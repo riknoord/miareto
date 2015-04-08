@@ -13,7 +13,8 @@ body{
     font-family: 'Open Sans Condensed', sans-serif;
 }
 a:hover{text-decoration: none;}
-
+a:visited{text-decoration: none;}
+a:active {text-decoration:none; }
 
 .form-group-line{
     display:inline-block;
@@ -104,7 +105,6 @@ footer{
 .profilemenu a:hover{
     background-color: rgb(90, 90, 90);
 }
-
 
 /* Front Login page */
 .front-login {
@@ -230,7 +230,7 @@ footer{
     box-shadow: 0px 3px 4px 0px rgb(200, 200, 200);
 }
 .messages .msg .msg-content{
-    font-size: 12px;
+    font-size: 14px;
     color: #9E9E9E;
     padding-top: 4px;
 }
