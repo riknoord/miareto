@@ -31,6 +31,8 @@
 $(function () {
     $('#fileupload').fileupload({
         dataType: 'json',
+        maxNumberOfFiles: 1,
+        dropZone: null,
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
                 $('.my-avatar-container').attr('src',file.name);
