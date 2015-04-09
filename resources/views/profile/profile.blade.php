@@ -25,11 +25,11 @@
         </div>
 
         <div class="f-p-info-box w-box">
-            <h2>Rik van Noord</h2>
+            <h2>{{$profile->firstname}} {{$profile->lastname}}</h2>
             <span>Hellevoetsluis</span><span class="sub-right">Profile</span>
         </div>
         <div class="f-p-img-box w-box">
-            <img src="../images/profile_21423567.jpg" />
+            <img  src="../images/profiles/{{$profile->id}}/{{$profile->profileimage->image}}" @if($profile->user_id == Auth::user()->id) class="my-avatar-container" @endif />
         </div>
     </div>
 </div>

@@ -33,7 +33,7 @@
                         <img src="{{"images/profiles/".$message->profile->id."/".$message->profile->profileimage->image}}" @if($message->profile->user_id == Auth::user()->id) class="my-avatar-container" @endif />
                         @endif
                         <div class="msg-from-info">
-                            <div class="title">{{$message->profile->firstname}} {{$message->profile->lastname}}</div>
+                            <div class="title"><a href="/{{$message->profile->slug}}">{{$message->profile->firstname}} {{$message->profile->lastname}}</a></div>
                             <div class="info">{{$message->created_at->diffForHumans()}}</div>
                         </div>
                     </div>

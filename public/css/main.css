@@ -59,6 +59,9 @@ footer{
     margin: 5px 0px 0px 0px;
     padding: 0px;
 }
+.NavProfileContainer a{
+    color:#fff;
+}
 .NavProfileContainer .NavProfile-City{
     color:#cecece;
     font-size:12px;
@@ -212,6 +215,9 @@ footer{
     margin: 0px;
     color: #949494;
 }
+.messages .msg .msg-from .title a{
+    color: #949494;
+}
 .messages .msg .msg-from-info{
     padding-left: 50px;
     margin-top: -5px;
@@ -220,6 +226,9 @@ footer{
 .messages .msg .msg-from .info{
     color: #f2be8c !important;
     font-size: 12px
+}
+.messages .msg .msg-from .info a{
+    color: #f2be8c !important;
 }
 .messages .msg .msg-from img{
     width: 42px;

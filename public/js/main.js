@@ -40,7 +40,8 @@ $(function() {
 
 function resize_left_bar(){
     if($(".main-profile-field") && $(".main-message-field")){
-        $(".main-message-field").height($(".main-profile-field").height() + "px");
+        if($(".main-message-field").height() < $(".main-profile-field").height())
+            $(".main-message-field").height($(".main-profile-field").height() + "px");
     }
 }
 function loading(loadcontainer, show){

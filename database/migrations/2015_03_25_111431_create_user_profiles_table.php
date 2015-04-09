@@ -11,6 +11,7 @@ class CreateUserProfilesTable extends Migration {
 
             $table->increments('id');
             $table->integer('user_id');
+            $table->string('slug');
             $table->string('firstname');
             $table->string('lastname');
             $table->string('street');
