@@ -29,7 +29,11 @@
             <span>Hellevoetsluis</span><span class="sub-right">Profile</span>
         </div>
         <div class="f-p-img-box w-box">
-            <img  src="../images/profiles/{{$profile->id}}/{{$profile->profileimage->image}}" @if($profile->user_id == Auth::user()->id) class="my-avatar-container" @endif />
+            @if(!isset($profile->profileimage))
+            <img src="images/profiles/no-profile/avatar.jpg" @if((Auth::user()) && ($profile->user_id == Auth::user()->id)) class="my-avatar-container" @endif />
+            @else
+            <img src="{{"images/profiles/".$profile->id."/".$profile->profileimage->image}}" @if((Auth::user()) && ($profile->user_id == Auth::user()->id)) class="my-avatar-container" @endif />
+            @endif
         </div>
     </div>
 </div>
