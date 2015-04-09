@@ -26,7 +26,7 @@
             @foreach($messages AS $message)
             <li>
                 <div class="w-box msg">
-                    <div class="msg-from">>
+                    <div class="msg-from">
                         @if(!isset($message->profile->profileimage))
                         <img src="images/profiles/no-profile/avatar.jpg" @if($message->profile->user_id == Auth::user()->id) class="my-avatar-container" @endif />
                         @else
