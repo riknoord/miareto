@@ -31,6 +31,7 @@
 
 	</header>
 
+    @if(Auth::Check())
 	<div class="profilemenu">
 	    <div class="container">
 	        <div class="col-lg-12">
@@ -43,6 +44,7 @@
 	        </div>
 	    </div>
 	</div>
+    @endif
 
     @yield('content')
 
