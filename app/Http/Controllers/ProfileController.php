@@ -51,7 +51,7 @@ class ProfileController extends Controller {
 		$profile    = UserProfile::where('slug','=',$slug)->with('profileimage')->first();
         if(!$profile) App::abort(404);
 
-        $messages   = Message::IdDescending()->FromProfile($profile)->limit(30)->get();
+        $messages   = Message::IdDescending()->FromProfile($profile)->with('profile','profile.profileimage')->limit(30)->get();
 
         return view("profile.profile")->with(compact('profile','messages'));
 

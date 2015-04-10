@@ -64,10 +64,16 @@
             <li>
                 <div class="w-box msg">
                     <div class="msg-from">
-                        <img src="../images/profile_21423567.jpg" >
+
+                        @if(!isset($message->profile->profileimage))
+                        <img src="images/profiles/no-profile/avatar.jpg" @if(Auth::check() && $profile->id != Auth::user()->profile->id) class="my-avatar-container" @endif />
+                        @else
+                        <img src="images/profiles/{{$message->profile->id}}/{{$message->profile->profileimage->image}}" @if(Auth::check() && $profile->id != Auth::user()->profile->id) class="my-avatar-container" @endif />
+                        @endif
+
                         <div class="msg-from-info">
-                            <div class="title">Rik van Noord</div>
-                            <div class="info">{{$message->created_at}}</div>
+                            <div class="title">{{ $message->profile->firstname }} {{ $message->profile->lastname }}</div>
+                            <div class="info">{{$message->created_at->diffForHumans()}}</div>
                         </div>
                     </div>
                     <div class="msg-content">
