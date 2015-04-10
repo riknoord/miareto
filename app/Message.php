@@ -12,8 +12,11 @@ class Message extends Model {
         return $this->belongsTo('App\UserProfile','userprofile_id','id');
     }
 
-    public function scopeIdDescending($query)
-    {
+    public function scopeIdDescending($query){
         return $query->orderBy('id','DESC');
+    }
+
+    public function scopeFromProfile($query,$profile){
+        return $query->where('userprofile_id','=',$profile->id);
     }
 }

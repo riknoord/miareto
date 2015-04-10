@@ -29,6 +29,10 @@
             <span>Hellevoetsluis</span><span class="sub-right">Profile</span>
         </div>
         <div class="f-p-img-box w-box">
+            @if(Auth::check() && $profile->user->id != Auth::user()->profile->id)
+            <a href="/friends/add"><span class="glyphicon glyphicon-plus" aria-hidden="true""></span> Add friend</a>
+            @endif
+
             @if(!isset($profile->profileimage))
             <img src="images/profiles/no-profile/avatar.jpg" @if((Auth::user()) && ($profile->user_id == Auth::user()->id)) class="my-avatar-container" @endif />
             @else
@@ -55,27 +59,27 @@
             </div>
         </div>
         <ul class="messages">
-            <?php for($i =0;$i<=4; $i++){ ?>
+            @if(isset($messages))
+            @foreach($messages AS $message)
             <li>
                 <div class="w-box msg">
                     <div class="msg-from">
                         <img src="../images/profile_21423567.jpg" >
                         <div class="msg-from-info">
                             <div class="title">Rik van Noord</div>
-                            <div class="info">10-06-1986 14:65</div>
+                            <div class="info">{{$message->created_at}}</div>
                         </div>
                     </div>
                     <div class="msg-content">
-                        Zijn er mensen die misschien wat werk hebben voor morgen voor een (kleine) vergoeding???<br /><br />
-
-                        Financieel Fucked Up, net pas bericht gekregen dat mijn bijverdiensten op zaterdag nu door iemand anders overgenomen wordt. :-s
+                        {!! $message->message !!}
                     </div>
                     <div class="msg-comments">
 
                     </div>
                 </div>
             </li>
-            <?php } ?>
+            @endforeach
+            @endif
         </ul>
     </div>
 
