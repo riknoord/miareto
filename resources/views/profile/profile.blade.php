@@ -29,7 +29,7 @@
             <span>Hellevoetsluis</span><span class="sub-right">Profile</span>
         </div>
         <div class="f-p-img-box w-box">
-            @if(Auth::check() && $profile->user->id != Auth::user()->profile->id)
+            @if(Auth::check() && $profile->id != Auth::user()->profile->id)
             <a href="/friends/add"><span class="glyphicon glyphicon-plus" aria-hidden="true""></span> Add friend</a>
             @endif
 
