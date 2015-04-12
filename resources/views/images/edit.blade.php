@@ -1,3 +1,4 @@
+<div class="loader images"><img src="/images/squares.gif" /></div>
 <div class="edit-profile-images">
     <div class="container-fluid">
         <div class="row">
@@ -33,9 +34,13 @@ $(function () {
         dataType: 'json',
         maxNumberOfFiles: 1,
         dropZone: null,
+        start: function (e,data){
+            loading('loader.images',true);
+        },
         done: function (e, data) {
             $.each(data.result.files, function (index, file) {
                 $('.my-avatar-container').attr('src',file.name);
+                loading('loader.images',false);
             });
         }
     });

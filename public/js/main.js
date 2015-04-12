@@ -47,6 +47,7 @@ function resize_left_bar(){
 function loading(loadcontainer, show){
 
     if(show) {
+        console.log($("." + loadcontainer).height());
         var margintop = ($("." + loadcontainer).height() / 2) - 20;
 
         $("." + loadcontainer + ">img").css("margin-top",  margintop + "px");
