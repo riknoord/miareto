@@ -384,3 +384,57 @@ footer{
     margin-top: 6px;
     width: 254px;
 }
+
+
+/* History Surf bar */
+.history_from {
+    background-color: white;
+}
+.history_from ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.history_from li{
+    position:relative;
+    float: left;
+    margin: 6px 22px;
+}
+.history_from li:first-child .dot-bar{
+    display: none;
+}
+.history_from img{
+    width:40px;
+    border: 2px solid white;
+    box-shadow: 0px 0px 6px 2px rgb(215, 215, 215);
+}
+
+
+/* Bars */
+.dot-bar{
+    position: absolute;
+    left: -40px;
+    top: 18px;
+    z-index: 20;
+}
+.dot-bar .bar{
+    width: 34px;
+    height: 2px;
+    background-color: rgb(21, 101, 143);
+}
+.dot-bar .dot{
+    width: 9px;
+    height: 12px;
+    background-color: rgb(21, 101, 143);
+    position: absolute;
+}
+.dot-bar .dot.l{
+    left: -4px;
+    top: -4px;
+    border-radius: 0px 50% 50% 0px;
+}
+.dot-bar .dot.r{
+    right: -6px;
+    top: -4px;
+    border-radius: 50% 0px 0px 50%;
+}
