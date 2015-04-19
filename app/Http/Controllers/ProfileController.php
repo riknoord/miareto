@@ -3,11 +3,10 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Models\Message;
-use App\Models\UserProfile;
+use App\Message;
+use App\UserProfile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
-use App\Lib\TimelineHistory\History;
 
 class ProfileController extends Controller {
 
@@ -47,17 +46,14 @@ class ProfileController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($slug, History $history)
+	public function show($slug)
     {
 		$profile    = UserProfile::where('slug','=',$slug)->with('profileimage')->first();
         if(!$profile) App::abort(404);
 
-        $history->repository()->add($profile);
-
-        $history = $history->repository()->all();
         $messages   = Message::IdDescending()->FromProfile($profile)->with('profile','profile.profileimage')->limit(30)->get();
 
-        return view("profile.profile")->with(compact('profile','messages','history'));
+        return view("profile.profile")->with(compact('profile','messages'));
 
 	}
 

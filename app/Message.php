@@ -1,4 +1,4 @@
-<?php namespace App\Models;
+<?php namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,7 +9,7 @@ class Message extends Model {
     protected $fillable = ['message'];
 
     public function profile(){
-        return $this->belongsTo('App\Models\UserProfile','userprofile_id','id');
+        return $this->belongsTo('App\UserProfile','userprofile_id','id');
     }
 
     public function scopeIdDescending($query){
