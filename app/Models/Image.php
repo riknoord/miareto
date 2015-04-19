@@ -1,4 +1,4 @@
-<?php namespace App;
+<?php namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -9,6 +9,6 @@ class Image extends Model {
     protected $fillable = ['image','is_profile_image'];
 
     public function profile(){
-        $this->belongsTo('App\UserProfile','userprofile_id');
+        $this->belongsTo('App\Models\UserProfile','userprofile_id');
     }
 }

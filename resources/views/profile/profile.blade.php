@@ -1,6 +1,23 @@
 @extends('main')
 
 @section('content')
+<div class="history_from">
+    <div class="container">
+    <ul>
+    @foreach($history AS $profile)
+        <li>
+        <div class="dot-bar">
+            <div class="bar">
+                <div class="dot l"></div>
+                <div class="dot r"></div>
+            </div>
+        </div>
+        <img src="{{"images/profiles/".$profile->id."/".$profile->profileimage->image}}" style="width: 40px;"/>
+        </li>
+    @endforeach
+    </ul>
+    </div>
+</div>
 <div class="container-fluid">
     <div class="front-profile">
 
