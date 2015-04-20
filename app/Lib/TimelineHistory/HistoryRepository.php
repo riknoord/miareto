@@ -48,7 +48,7 @@ class HistoryRepository {
     private function LastProfileIsMine(UserProfile $userProfile){
         if($userProfile->id == $this->authuser->id)
             return true;
-        if(end($this->userprofiles)->id == $userProfile->id)
+        if(count($this->userprofiles) > 0 && end($this->userprofiles)->id == $userProfile->id)
             return true;
 
         return false;
