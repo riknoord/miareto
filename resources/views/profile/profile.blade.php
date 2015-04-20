@@ -4,7 +4,7 @@
 <div class="history_from">
     <div class="container">
     <ul>
-    @foreach($history AS $profile)
+    @foreach($history AS $historyprofile)
         <li>
         <div class="dot-bar">
             <div class="bar">
@@ -12,7 +12,7 @@
                 <div class="dot r"></div>
             </div>
         </div>
-        <img src="{{"images/profiles/".$profile->id."/".$profile->profileimage->image}}" style="width: 40px;"/>
+        <img src="{{"images/profiles/".$historyprofile->id."/".$historyprofile->profileimage->image}}" style="width: 40px;"/>
         </li>
     @endforeach
     </ul>
