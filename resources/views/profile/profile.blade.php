@@ -47,7 +47,7 @@
         </div>
         <div class="f-p-img-box w-box">
             @if(Auth::check() && $profile->id != Auth::user()->profile->id)
-            <a href="/friends/add"><span class="glyphicon glyphicon-plus" aria-hidden="true""></span> Add friend</a>
+            <a class="w-box invite-friend" href="/friends/add"><span class="glyphicon glyphicon-plus" aria-hidden="true""></span> Add friend</a>
             @endif
 
             <img src="{{$profile->present()->profileimage}}" @if((Auth::user()) && ($profile->user_id == Auth::user()->id)) class="my-avatar-container" @endif />

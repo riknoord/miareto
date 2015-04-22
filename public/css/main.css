@@ -334,6 +334,14 @@ footer{
     text-align: right;
 }
 
+.invite-friend{
+    position:absolute;
+    left:15px;
+    bottom:15px;
+}
+
+
+
 /* Profile-link */
 .profile-link{
     margin-top: 174px;
