@@ -15,7 +15,7 @@ class UserProfile extends Presenter {
     public function ProfileImage()
     {
         if(count($this->entity->profileimage))
-            return "images/profiles/".$this->entity->user_id."/".$this->entity->profileimage->image;
+            return "images/profiles/".$this->entity->id."/".$this->entity->profileimage->image;
 
         return $this->entity->EmptyProfileImage();
     }
