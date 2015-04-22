@@ -13,7 +13,9 @@ class HistoryRepository {
 
     public function init(){
         $this->userprofiles = Session::get($this->HistoryListKey,[]);
-        $this->authuser = Auth::User();
+
+        if(Auth::check())
+            $this->authuser = Auth::User();
     }
 
     private function updatesession(){
@@ -46,6 +48,8 @@ class HistoryRepository {
     }
 
     private function LastProfileIsMine(UserProfile $userProfile){
+        if(!isset($this->authuser))
+            return false;
         if($userProfile->user_id == $this->authuser->id)
             return true;
         if(count($this->userprofiles) > 0 && end($this->userprofiles)->id == $userProfile->id)
