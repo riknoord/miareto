@@ -1,5 +1,6 @@
 <?php namespace App\Models;
 
+use App\Lib\Presenter\PresentableTrait;
 use Illuminate\Database\Eloquent\Model;
 
 /**
@@ -7,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
  * @package App
  */
 class UserProfile extends Model {
+
+    use PresentableTrait;
+
+    /**
+     * @var string
+     */
+    protected $presenter = 'App\Miareto\Presenters\UserProfile';
 
     /**
      * @var string
@@ -39,8 +47,18 @@ class UserProfile extends Model {
         return $this->hasMany('App\Models\Image','userprofile_id');
     }
 
+    /**
+     * @return mixed
+     */
     public function profileimage(){
         return $this->hasOne('App\Models\Image','userprofile_id')->where('is_profile_image','=','1');
+    }
+
+    /**
+     * @return string
+     */
+    public function emptyProfileImage(){
+        return "images/profiles/no-profile/avatar.jpg";
     }
 
 }
