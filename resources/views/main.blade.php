@@ -36,6 +36,7 @@
 	    <div class="container">
 	        <div class="col-lg-12">
                 <ul class="items">
+                    <li class="item"><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span>&nbsp;&nbsp;Home</a></li>
                     <li class="item"><a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;&nbsp;My profile</a></li>
                     <li class="item"><a class="pop-menu" href="/images/edit"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;&nbsp;My images</a></li>
                     <li class="item"><a href="#"><span class="glyphicon glyphicon-comment" aria-hidden="true"></span>&nbsp;&nbsp;My messages</a></li>

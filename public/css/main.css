@@ -94,7 +94,7 @@ footer{
 }
 .profilemenu .item{
     float: left;
-    width: 25%;
+    width: 20%;
     border-right: 1px solid grey;
 }
 .profilemenu .item:last-child{
