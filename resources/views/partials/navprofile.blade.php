@@ -1,6 +1,6 @@
 @if($ShowNavProfile)
 <ul class="NavProfileContainer">
-    <li><img src="/images/profiles/no-profile/avatar.jpg" /></li>
+    <li><img src="{{$profile->present()->ProfileImage}}" /></li>
     <li>
         <div>
             <div class="NavProfile-Name"><a href="/{{$profile->slug}}">{{ $profile->firstname }} {{ $profile->lastname }}</a></div>
