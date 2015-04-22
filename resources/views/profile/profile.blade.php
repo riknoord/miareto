@@ -6,13 +6,15 @@
     <ul>
     @foreach($history AS $historyprofile)
         <li>
+        <a href="{{$historyprofile->present()->link}}">
         <div class="dot-bar">
             <div class="bar">
                 <div class="dot l"></div>
                 <div class="dot r"></div>
             </div>
         </div>
-        <img src="{{$historyprofile->present()->profileimage}}" style="width: 40px;"/>
+        <img src="{{$historyprofile->present()->profileimage}}"/>
+        </a>
         </li>
     @endforeach
     </ul>

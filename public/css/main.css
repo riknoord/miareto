@@ -407,6 +407,7 @@ footer{
     position:relative;
     float: left;
     margin: 6px 22px;
+    height:40px;
 }
 .history_from li:first-child .dot-bar{
     display: none;
@@ -415,8 +416,17 @@ footer{
     width:40px;
     border: 2px solid white;
     box-shadow: 0px 0px 6px 2px rgb(215, 215, 215);
-}
 
+    -webkit-transition-property: width, margin, border; /* Safari */
+    -webkit-transition-duration: .1s; /* Safari */
+    transition-property: width, margin, border;
+    transition-duration: .1s;
+}
+.history_from img:hover{
+    width:44px;
+    margin:-2px;
+    border:2px solid #15658F;
+}
 
 /* Bars */
 .dot-bar{

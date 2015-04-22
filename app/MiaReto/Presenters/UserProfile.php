@@ -20,4 +20,8 @@ class UserProfile extends Presenter {
         return $this->entity->EmptyProfileImage();
     }
 
+    public function link(){
+        return "/".$this->entity->slug;
+    }
+
 } 
