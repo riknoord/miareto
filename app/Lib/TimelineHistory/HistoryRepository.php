@@ -44,7 +44,7 @@ class HistoryRepository {
     }
 
     public function all(){
-        return array_slice($this->userprofiles,0,8);
+        return array_slice($this->userprofiles,-8,8);
     }
 
     private function LastProfileIsMine(UserProfile $userProfile){

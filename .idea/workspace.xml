@@ -88,8 +88,6 @@
       <file leaf-file-name="HistoryRepository.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Lib/TimelineHistory/HistoryRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45506692" vertical-offset="0" max-vertical-offset="1071">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -941,8 +939,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Lib/TimelineHistory/HistoryRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45506692" vertical-offset="0" max-vertical-offset="1071">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
