@@ -14,7 +14,7 @@ class UserProfile extends Model {
     /**
      * @var string
      */
-    protected $presenter = 'App\Miareto\Presenters\UserProfile';
+    protected $presenter = 'App\MiaReto\Presenters\UserProfile';
 
     /**
      * @var string
