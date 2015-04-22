@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Session;
 
 class HistoryRepository {
 
-    private $HistoryListKey = "Historys";
+    private $HistoryListKey = "HistoryList";
 
     private $userprofiles = [];
     private $authuser;
