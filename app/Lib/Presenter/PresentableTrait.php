@@ -4,7 +4,7 @@ use App\Lib\Presenter\PresenterException;
 
 trait PresentableTrait {
 
-    protected static $presenterInstance;
+    protected $presenterInstance;
 
     public function present(){
 
@@ -13,12 +13,12 @@ trait PresentableTrait {
             return new PresenterException('Please set your $presenter property on the model.');
         }
 
-        if(!isset(static::$presenterInstance))
+        if(!isset($this->presenterInstance))
         {
-            static::$presenterInstance = new $this->presenter($this);
+            $this->presenterInstance = new $this->presenter($this);
         }
 
-        return static::$presenterInstance;
+        return $this->presenterInstance;
     }
 
 } 
