@@ -44,14 +44,13 @@ class HistoryRepository {
     }
 
     public function all(){
-        return array_slice($this->userprofiles,-8,8);
+        return array_reverse(array_slice($this->userprofiles,-8,8));
     }
 
     private function LastProfileIsMine(UserProfile $userProfile){
-        if(!isset($this->authuser))
-            return false;
-        if($userProfile->user_id == $this->authuser->id)
+        if(isset($this->authuser) && $userProfile->user_id == $this->authuser->id)
             return true;
+
         if(count($this->userprofiles) > 0 && end($this->userprofiles)->id == $userProfile->id)
             return true;
 
