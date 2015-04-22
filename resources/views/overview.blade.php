@@ -27,7 +27,7 @@
             <li>
                 <div class="w-box msg">
                     <div class="msg-from">
-                        <img src="{{$message->profile->present()->profileimage}}" @if($message->profile->user_id == Auth::user()->id) class="my-avatar-container" @endif />
+                        <img src="{{$message->profile->present()->ProfileImage}}" @if($message->profile->user_id == Auth::user()->id) class="my-avatar-container" @endif />
                         <div class="msg-from-info">
                             <div class="title"><a href="/{{$message->profile->slug}}">{{$message->profile->firstname}} {{$message->profile->lastname}}</a></div>
                             <div class="info">{{$message->created_at->diffForHumans()}}</div>
