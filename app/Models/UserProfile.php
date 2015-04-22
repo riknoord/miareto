@@ -57,7 +57,7 @@ class UserProfile extends Model {
     /**
      * @return string
      */
-    public function emptyProfileImage(){
+    public function EmptyProfileImage(){
         return "images/profiles/no-profile/avatar.jpg";
     }
 
